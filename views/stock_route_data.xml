@@ -1,0 +1,34 @@
+<openerp>
+    <data noupdate="False">
+        <record id="sequence_check_order_type" model="ir.sequence.type">
+            <field name="name">Check Order</field>
+            <field name="code">mrp_miaoyin.check_order</field>
+        </record>
+
+        <record id="sequence_check_order" model="ir.sequence">
+            <field name="name">Check Order</field>
+            <field name="code">mrp_miaoyin.check_order</field>
+            <field name="prefix">CHK</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+
+        <record model="stock.picking.type" id="stock_picking_check">
+            <field name="name">质检单</field>
+            <field name="code">internal</field>
+            <field name="default_location_src_id" ref="mrp_miaoyin.stock_location_after_production"/>
+            <field name="default_location_dest_id" ref="stock.stock_location_stock"/>
+            <field name="sequence_id" ref="mrp_miaoyin.sequence_check_order"/>
+        </record>
+
+        <record id="stock_location_path_check" model="stock.location.path">
+            <field name="name">check to stock</field>
+            <field name="location_from_id" ref="mrp_miaoyin.stock_location_after_production"/>
+            <field name="location_dest_id" ref="stock.stock_location_stock"/>
+            <field name="picking_type_id" ref="mrp_miaoyin.stock_picking_check"/>
+            <field name="auto">manual</field>
+            <field name="route_id" ref="mrp.route_warehouse0_manufacture"/>
+        </record>
+    </data>
+</openerp>
