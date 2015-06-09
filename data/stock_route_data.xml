@@ -1,13 +1,13 @@
 <openerp>
     <data noupdate="False">
-        <record id="sequence_check_order_type" model="ir.sequence.type">
-            <field name="name">Check Order</field>
-            <field name="code">mrp_miaoyin.check_order</field>
-        </record>
+        <!--<record id="sequence_check_order_type" model="ir.sequence.type">-->
+            <!--<field name="name">Check Order</field>-->
+            <!--<field name="code">mrp_miaoyin.check_order</field>-->
+        <!--</record>-->
 
         <record id="sequence_check_order" model="ir.sequence">
             <field name="name">Check Order</field>
-            <field name="code">mrp_miaoyin.check_order</field>
+            <!--<field name="code">mrp_miaoyin.check_order</field>-->
             <field name="prefix">CHK</field>
             <field name="padding">5</field>
             <field name="number_next">1</field>
@@ -29,6 +29,7 @@
             <field name="picking_type_id" ref="mrp_miaoyin.stock_picking_check"/>
             <field name="auto">manual</field>
             <field name="route_id" ref="mrp.route_warehouse0_manufacture"/>
+            <field name="warehouse_id" ref="stock.warehouse0"/>
         </record>
     </data>
 </openerp>

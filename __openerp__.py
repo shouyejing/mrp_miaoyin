@@ -5,8 +5,9 @@
     'author': "wangting",
     'category': 'custom',
     'data': [
-        'views/stock_location_data.xml',
-        'views/stock_route_data.xml'
+        'data/stock_location_data.xml',
+        'data/stock_route_data.xml'
+        'views/mrp_routing_view.xml'
     ],
     'application': True,
     'description': """
