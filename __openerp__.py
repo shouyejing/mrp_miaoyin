@@ -6,7 +6,7 @@
     'category': 'custom',
     'data': [
         'data/stock_location_data.xml',
-        'data/stock_route_data.xml'
+        'data/stock_route_data.xml',
         'views/mrp_routing_view.xml'
     ],
     'application': True,

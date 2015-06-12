@@ -21,4 +21,8 @@ class Production(models.Model):
                                        readonly=True)
     location_src_id = fields.Many2one(readonly=True)
 
-
+    @api.onchange('routing_id')
+    @api.one
+    def _onchange_routing_id(self):
+        if self.routing_id and self.routing_id.location_dest_id:
+            self.location_dest_id = self.routing_id.location_dest_id
