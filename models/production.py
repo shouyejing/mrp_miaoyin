@@ -4,8 +4,7 @@ from openerp import models, fields, api, exceptions, _
 class Routing(models.Model):
     _inherit = 'mrp.routing'
 
-
-    location_dest_id = fields.Many2one('stock.location')
+    location_dest_id = fields.Many2one('stock.location', required=True)
 
 
 class Production(models.Model):

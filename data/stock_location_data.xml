@@ -1,25 +1,25 @@
 <openerp>
     <data noupdate="False">
         <record id="stock_location_after_production" model="stock.location">
-            <field name="name">生产待入库</field>
+            <field name="name">生产完成待入库</field>
             <field name="location_id" ref="stock.stock_location_stock"/>
             <field name="usage">view</field>
         </record>
 
         <record id="stock_location_after_production_lapian" model="stock.location">
-            <field name="name">拉片生产待入库</field>
+            <field name="name">拉片生产完成待入库</field>
             <field name="location_id" ref="mrp_miaoyin.stock_location_after_production"/>
             <field name="usage">internal</field>
         </record>
 
         <record id="stock_location_after_production_xisu" model="stock.location">
-            <field name="name">吸塑生产待入库</field>
+            <field name="name">吸塑生产完成待入库</field>
             <field name="location_id" ref="mrp_miaoyin.stock_location_after_production"/>
             <field name="usage">internal</field>
         </record>
 
         <record id="stock_location_after_production_chongchuang" model="stock.location">
-            <field name="name">冲床生产待入库</field>
+            <field name="name">冲床生产完成待入库</field>
             <field name="location_id" ref="mrp_miaoyin.stock_location_after_production"/>
             <field name="usage">internal</field>
         </record>
@@ -29,7 +29,6 @@
             <field name="location_id" ref="stock.stock_location_stock"/>
             <field name="usage">internal</field>
         </record>
-
 
     </data>
 </openerp>
