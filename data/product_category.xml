@@ -1,0 +1,8 @@
+<openerp>
+    <data noupdate="False">
+        <record model="product.category" id="product_category_offcut">
+            <field name="name">边角料</field>
+            <field name="parent_id" ref="product.product_category_all"/>
+        </record>
+    </data>
+</openerp>

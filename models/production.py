@@ -25,3 +25,14 @@ class Production(models.Model):
     def _onchange_routing_id(self):
         if self.routing_id and self.routing_id.location_dest_id:
             self.location_dest_id = self.routing_id.location_dest_id
+
+    # @api.one
+    # def _compute_product_category_cutoff_id(self):
+    #     self.product_category_cutoff_id = self.env.ref("mrp_miaoyin.product_category_offcut").id
+
+    #product_category_cutoff_id = fields.Integer(compute=_compute_product_category_cutoff_id, store=True, readonly=True)
+
+    product_category_cutoff_id = fields.Integer(default=lambda self: self.env.ref("mrp_miaoyin.product_category_offcut").id,
+                                                readonly=True)
+
+    # product_id = fields.Many2one(domain=[('category_id', 'child_of', product_category_cutoff_id)])

@@ -1,0 +1,29 @@
+<!--<openerp>-->
+    <!--<data>-->
+        <!--<record id="cutoff_production_form_view" model="ir.ui.view">-->
+            <!--<field name="name">cutoff_production_form_view</field>-->
+            <!--<field name="model">mrp_miaoyin.offcut_production</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<form string="Cut Off Manufacturing Orders">-->
+                    <!--<field name="product_id"/>-->
+                <!--</form>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <!--<record id="cutoff_production_tree_view" model="ir.ui.view">-->
+            <!--<field name="name">cutoff_production_tree_view</field>-->
+            <!--<field name="model">mrp_miaoyin.offcut_production</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<tree>-->
+                    <!--<field name="name"/>-->
+                <!--</tree>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <!--<act_window id="action_offcut_production" name="offcut production"-->
+            <!--res_model="mrp_miaoyin.offcut_production" view_mode="tree,form" />-->
+
+        <!--<menuitem id="menu_offcut_production" name="Offcut Production" parent="mrp.menu_mrp_manufacturing"-->
+                <!--action="action_offcut_production"/>-->
+    <!--</data>-->
+<!--</openerp>-->
