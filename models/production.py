@@ -32,7 +32,7 @@ class Production(models.Model):
 
     #product_category_cutoff_id = fields.Integer(compute=_compute_product_category_cutoff_id, store=True, readonly=True)
 
-    product_category_cutoff_id = fields.Integer(default=lambda self: self.env.ref("mrp_miaoyin.product_category_offcut").id,
-                                                readonly=True)
+    #product_category_cutoff_id = fields.Integer(default=lambda self: self.env.ref("mrp_miaoyin.product_category_offcut").id,
+    #                                            readonly=True)
 
-    product_id = fields.Many2one('product.product', domain=[('category_id', 'child_of', product_category_cutoff_id)])
+    #product_id = fields.Many2one('product.product', domain=[('category_id', 'child_of', product_category_cutoff_id)])
