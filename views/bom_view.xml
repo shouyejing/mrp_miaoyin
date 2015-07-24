@@ -1,0 +1,14 @@
+<openerp>
+    <data>
+        <record id="mrp_bom_form_view" model="ir.ui.view">
+            <field name="name">mrp.bom.form</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_form_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='bom_line_ids']//field[@name='product_qty']" position="after">
+                    <field name="allowance"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,36 @@
+<openerp>
+    <data>
+        <record id="view_move_form" model="ir.ui.view">
+            <field name="name">stock.move.form</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_form" />
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <field name="bad_rate"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_move_tree" model="ir.ui.view">
+            <field name="name">stock.move.tree</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_tree" />
+            <field name="arch" type="xml">
+                <field name="product_uom_qty" position="after">
+                    <field name="bad_rate"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_move_graph" model="ir.ui.view">
+            <field name="name">stock.move.graph</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_graph" />
+            <field name="arch" type="xml">
+                <field name="product_uom_qty" position="after">
+                    <field name="bad_rate" type="measure"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -11,20 +11,10 @@ class StockMove(models.Model):
     def _compute_bad_rate(self):
         ops = self.picking_id.pack_operation_ids
         loc_id = self.env.ref("mrp_miaoyin.stock_location_bad_product").id
-        if ops:
-            bad_count = sum((op.qty_done for op in ops if op.location_dest_id.id == loc_id))
+        if ops and self.state == "done":
+            bad_count = sum((op.qty_done for op in ops if op.location_dest_id.id == loc_id and
+                             op.product_id.id == self.product_id.id))
             self.bad_rate = float(bad_count) / self.product_uom_qty
 
-
-class StockPicking(models.Model):
-    _inherit = 'stock.picking'
-
-    # @api.multi
-    # def do_new_transfer(self):
-    #     for picking in self:
-    #         super(StockPicking, picking).do_new_transfer()
-    #         # if picking.move_lines_related:
-    #         #     for move in picking.move_lines_related:
-    #         #         move.bad_rate = 100.0
 
 

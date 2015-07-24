@@ -36,3 +36,9 @@ class Production(models.Model):
     #                                            readonly=True)
 
     #product_id = fields.Many2one('product.product', domain=[('category_id', 'child_of', product_category_cutoff_id)])
+
+
+class BomLine(models.Model):
+    _inherit = 'mrp.bom.line'
+
+    allowance = fields.Float()

@@ -22,34 +22,34 @@
             <field name="sequence_id" ref="mrp_miaoyin.sequence_check_order"/>
         </record>
 
-        <record id="stock_location_path_lapian_to_stock" model="stock.location.path">
-            <field name="name">拉片 至 库存</field>
-            <field name="location_from_id" ref="mrp_miaoyin.stock_location_after_production_lapian"/>
-            <field name="location_dest_id" ref="stock.stock_location_stock"/>
-            <field name="picking_type_id" ref="mrp_miaoyin.stock_picking_check"/>
-            <field name="auto">manual</field>
-            <field name="route_id" ref="mrp.route_warehouse0_manufacture"/>
-            <field name="warehouse_id" ref="stock.warehouse0"/>
-        </record>
+        <!--<record id="stock_location_path_lapian_to_stock" model="stock.location.path">-->
+            <!--<field name="name">拉片 至 库存</field>-->
+            <!--<field name="location_from_id" ref="mrp_miaoyin.stock_location_after_production_lapian"/>-->
+            <!--<field name="location_dest_id" ref="stock.stock_location_stock"/>-->
+            <!--<field name="picking_type_id" ref="mrp_miaoyin.stock_picking_check"/>-->
+            <!--<field name="auto">manual</field>-->
+            <!--<field name="route_id" ref="mrp.route_warehouse0_manufacture"/>-->
+            <!--<field name="warehouse_id" ref="stock.warehouse0"/>-->
+        <!--</record>-->
 
-        <record id="stock_location_path_xisu_to_stock" model="stock.location.path">
-            <field name="name">吸塑 至 库存</field>
-            <field name="location_from_id" ref="mrp_miaoyin.stock_location_after_production_xisu"/>
-            <field name="location_dest_id" ref="stock.stock_location_stock"/>
-            <field name="picking_type_id" ref="mrp_miaoyin.stock_picking_check"/>
-            <field name="auto">manual</field>
-            <field name="route_id" ref="mrp.route_warehouse0_manufacture"/>
-            <field name="warehouse_id" ref="stock.warehouse0"/>
-        </record>
+        <!--<record id="stock_location_path_xisu_to_stock" model="stock.location.path">-->
+            <!--<field name="name">吸塑 至 库存</field>-->
+            <!--<field name="location_from_id" ref="mrp_miaoyin.stock_location_after_production_xisu"/>-->
+            <!--<field name="location_dest_id" ref="stock.stock_location_stock"/>-->
+            <!--<field name="picking_type_id" ref="mrp_miaoyin.stock_picking_check"/>-->
+            <!--<field name="auto">manual</field>-->
+            <!--<field name="route_id" ref="mrp.route_warehouse0_manufacture"/>-->
+            <!--<field name="warehouse_id" ref="stock.warehouse0"/>-->
+        <!--</record>-->
 
-        <record id="stock_location_path_chongchuang_to_check" model="stock.location.path">
-            <field name="name">冲床 至 库存</field>
-            <field name="location_from_id" ref="mrp_miaoyin.stock_location_after_production_chongchuang"/>
-            <field name="location_dest_id" ref="stock.stock_location_stock"/>
-            <field name="picking_type_id" ref="mrp_miaoyin.stock_picking_check"/>
-            <field name="auto">manual</field>
-            <field name="route_id" ref="mrp.route_warehouse0_manufacture"/>
-            <field name="warehouse_id" ref="stock.warehouse0"/>
-        </record>
+        <!--<record id="stock_location_path_chongchuang_to_check" model="stock.location.path">-->
+            <!--<field name="name">冲床 至 库存</field>-->
+            <!--<field name="location_from_id" ref="mrp_miaoyin.stock_location_after_production_chongchuang"/>-->
+            <!--<field name="location_dest_id" ref="stock.stock_location_stock"/>-->
+            <!--<field name="picking_type_id" ref="mrp_miaoyin.stock_picking_check"/>-->
+            <!--<field name="auto">manual</field>-->
+            <!--<field name="route_id" ref="mrp.route_warehouse0_manufacture"/>-->
+            <!--<field name="warehouse_id" ref="stock.warehouse0"/>-->
+        <!--</record>-->
     </data>
 </openerp>

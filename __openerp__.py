@@ -9,9 +9,11 @@
         # 'views/offcut_production_view.xml',
         'data/stock_location_data.xml',
         'data/stock_route_data.xml',
-        'views/mrp_routing_view.xml'
+        'views/mrp_routing_view.xml',
+        'views/stock_move.xml',
+        'views/bom_view.xml'
     ],
-    'application': True,
+    'application': False,
     'description': """
         mrp miaoyin 3.0
     """
