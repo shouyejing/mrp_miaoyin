@@ -13,7 +13,7 @@
     ],
     'application': True,
     'description': """
-        mrp miaoyin 2.0
+        mrp miaoyin 3.0
     """
 }
 
