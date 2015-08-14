@@ -41,4 +41,18 @@ class Production(models.Model):
 class BomLine(models.Model):
     _inherit = 'mrp.bom.line'
 
-    allowance = fields.Float()
+    # allowance = fields.Float()
+    real_put = fields.Float(compute='_compute_real_put')
+
+    @api.one
+    @api.depends("product_efficiency")
+    def _compute_real_put(self):
+        self.real_put = self.product_qty / self.product_efficiency
+
+    # @api.onchange("product_efficiency")
+    # @api.one
+    # def _onchange_allowance(self):
+    #     if self.allowance > 0:
+    #         self.product_efficiency = 1/self.allowance
+    #         self.real_put = self.allowance * self.product_qty
+
