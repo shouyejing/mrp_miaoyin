@@ -24,6 +24,12 @@
             <field name="usage">internal</field>
         </record>
 
+        <record id="stock_location_after_production_dabao" model="stock.location">
+            <field name="name">打包生产完成待入库</field>
+            <field name="location_id" ref="mrp_miaoyin.stock_location_after_production"/>
+            <field name="usage">internal</field>
+        </record>
+
         <record id="stock_location_bad_product" model="stock.location">
             <field name="name">不良品</field>
             <field name="location_id" ref="stock.stock_location_stock"/>

@@ -56,3 +56,6 @@ class BomLine(models.Model):
     #         self.product_efficiency = 1/self.allowance
     #         self.real_put = self.allowance * self.product_qty
 
+class RecycleProduction(models.Model):
+    _inherit = 'mail.thread'
+

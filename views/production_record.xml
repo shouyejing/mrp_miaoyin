@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <act_window id="action_lapian_record" res_model="stock.move"
+                    name="action_stock_move" view_mode="tree,graph"
+                    domain="[('location_id','=',ref('mrp_miaoyin.stock_location_after_production_lapian'))]"/>
+        <act_window id="action_xisu_record" res_model="stock.move"
+                    name="action_stock_move" view_mode="tree,graph"
+                    domain="[('location_id','=',ref('mrp_miaoyin.stock_location_after_production_xisu'))]"/>
+        <act_window id="action_chongchuang_record" res_model="stock.move"
+                    name="action_stock_move" view_mode="tree,graph"
+                    domain="[('location_id','=',ref('mrp_miaoyin.stock_location_after_production_chongchuang'))]"/>
+        <act_window id="action_dabao_record" res_model="stock.move"
+                    name="action_stock_move" view_mode="tree,graph"
+                    domain="[('location_id','=',ref('mrp_miaoyin.stock_location_after_production_dabao'))]"/>
+
+        <menuitem id="menu_production_record" name="生产记录" parent="base.menu_mrp_root"/>
+
+        <menuitem id="menu_production_record_lapian" name="拉片生产记录" parent="mrp_miaoyin.menu_production_record"
+                  action="mrp_miaoyin.action_lapian_record"/>
+        <menuitem id="menu_production_record_xisu" name="吸塑生产记录" parent="mrp_miaoyin.menu_production_record"
+                  action="mrp_miaoyin.action_xisu_record"/>
+        <menuitem id="menu_production_record_chongchuang" name="冲床生产记录" parent="mrp_miaoyin.menu_production_record"
+                  action="mrp_miaoyin.action_chongchuang_record"/>
+        <menuitem id="menu_production_record_dabao" name="打包生产记录" parent="mrp_miaoyin.menu_production_record"
+                  action="mrp_miaoyin.action_dabao_record"/>
+
+    </data>
+</openerp>
